@@ -45,34 +45,35 @@
 # loop over the list using a for loop
 
 
-# while loop
+# while loop 
 
 
 # List Comprehensions
 
 # Create a new list containing the squares of all values in 'numbers'
+#%%
 numbers = [1, 2, 3, 4]
-squares = []
+squares = [(num**2) for num in numbers]
+
+
 
 print(numbers)
 print(squares)
 # Filtering with a list comprehension
-evens = []
-
-
+#%%
+evens = [[num for num in squares if num%2==0]]
 
 # create a new list of even numbers using the values of the numbers list as inputs
 
 print(evens)
-
+#%%
 # create a new list containing only the names that start with 's' make sure they are capitalized (regardless of their original case)
 names = ["Sarah", "jorge", "sam", "frank", "bob", "sandy"]
-s_names = []
+s_names = [name.title() for name in names if 
+           name.lower().startswith("s")==True]
 print(s_names)
 
-
-
-
+# I prefer title because it looks nicer
 
 # Dictionaries
 
@@ -83,3 +84,8 @@ print(s_names)
 # key value pairs
 
 # access an element via its key
+#%%
+holi = {'key':'holidays','beach':('local','island')}
+
+print(holi['beach'])
+
